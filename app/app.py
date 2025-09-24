@@ -2,13 +2,27 @@
 import os
 import streamlit as st
 import requests
+from datetime import datetime, timezone
 
-STORMGLASS_KEY = os.getenv("STORMGLASS_KEY")  # set in .env locally, GitHub Secrets for CI
+STORMGLASS_KEY = "9a35d8ec-9961-11f0-a246-0242ac130006-9a35d98c-9961-11f0-a246-0242ac130006"
 
-def get_surf_point(lat, lng, params="waveHeight,swells,swellDirection,windSpeed"):
+def get_surf_point(lat, lng, params="waveHeight,swellHeight,swellDirection,windSpeed"):
     url = "https://api.stormglass.io/v2/weather/point"
     headers = {"Authorization": STORMGLASS_KEY}
-    params_q = {"lat": lat, "lng": lng, "params": params}
+    
+    # Add required start/end timestamps
+    now = datetime.now(timezone.utc)
+    start = now.isoformat()
+    end = (now.replace(hour=23, minute=59, second=59)).isoformat()
+    
+    params_q = {
+        "lat": lat, 
+        "lng": lng, 
+        "params": params,
+        "start": start,
+        "end": end
+    }
+    
     resp = requests.get(url, headers=headers, params=params_q, timeout=10)
     resp.raise_for_status()
     return resp.json()
@@ -23,6 +37,6 @@ if st.button("Fetch surf forecast"):
     else:
         try:
             data = get_surf_point(lat, lng)
-            st.json(data)  # iterate and show summary in tabular form next
+            st.json(data)
         except Exception as e:
             st.error(f"Error fetching data: {e}")
