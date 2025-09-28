@@ -4,7 +4,7 @@ import streamlit as st
 import requests
 from datetime import datetime, timezone
 
-STORMGLASS_KEY = "9a35d8ec-9961-11f0-a246-0242ac130006-9a35d98c-9961-11f0-a246-0242ac130006"
+STORMGLASS_KEY = os.getenv("STORMGLASS_KEY")
 
 def get_surf_point(lat, lng, params="waveHeight,swellHeight,swellDirection,windSpeed"):
     url = "https://api.stormglass.io/v2/weather/point"
