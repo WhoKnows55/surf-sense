@@ -2,7 +2,7 @@
 
 ## 📝 Overview
 
-**SurfSense** is a master's thesis project developed as a **conversational agent** designed to streamline and enhance the process of planning a surf trip. It addresses the current challenge of having to check various, scattered sources for essential information—like weather forecasts, wave conditions, tide charts, and practical logistics—by unifying them into a single, intelligent, conversational interface.
+**SurfSense** is a master's thesis project developed as a **conversational agent** designed to streamline and enhance the process of planning a surf trip. It addresses the current challenge of having to check various, scattered sources for essential information — like weather forecasts, wave conditions, tide charts, and practical logistics by unifying them into a single, intelligent, conversational interface.
 
 The core innovation is the integration of **Large Language Model (LLM)** capabilities with an **agentic framework** to provide surf planning advice, intelligent forecasting, and contextual awareness. This project was completed for the Master in Data Science and Advanced Analytics program at NOVA IMS Management School.
 
