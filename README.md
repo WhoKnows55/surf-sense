@@ -47,8 +47,13 @@ The primary deliverable is a **working prototype** of a conversational agent tha
     ```
 2.  **Setup Environment:**
     ```bash
-    # Assuming Python and pip
-    pip install -r requirements.txt
+    # Recommended: create and activate a virtual environment
+    python3 -m venv .venv
+    source .venv/bin/activate
+    pip install --upgrade pip
+
+    # Install the project and test extras from pyproject.toml
+    pip install -e .[test]
     ```
 3.  **Configure API Keys:**
     * Set up necessary environmental variables for your LLM and external forecasting APIs (e.g., `OPENAI_API_KEY`, `STORMGALSS_API_KEY`).
