@@ -23,6 +23,16 @@ def build_pipeline(model_name: str, device_map=None, dtype=None, max_new_tokens=
 
     model = AutoModelForCausalLM.from_pretrained(model_name, **model_kwargs)
 
+    # Some remote/trust_remote_code models expect a cache implementation
+    # that may be incompatible with the installed transformers/runtime.
+    # Disable use_cache to avoid DynamicCache/seen_tokens errors during
+    # generation. This makes generation slightly slower but stable.
+    try:
+        model.config.use_cache = False
+    except Exception:
+        # If config doesn't exist or setting fails, ignore and continue
+        pass
+
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
@@ -77,7 +87,10 @@ def main():
 
             formatted_input = chat_template.format(user_input=user_input)
             try:
-                out = pipe(formatted_input)
+                # Disable the generation cache at call time to avoid runtime
+                # DynamicCache attribute errors (some remote models use custom
+                # cache implementations that are incompatible with this runtime).
+                out = pipe(formatted_input, use_cache=False)
                 # pipeline returns list of dicts with 'generated_text' when return_full_text=False
                 if isinstance(out, list) and len(out) > 0 and "generated_text" in out[0]:
                     resp = out[0]["generated_text"]
