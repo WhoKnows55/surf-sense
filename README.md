@@ -2,20 +2,20 @@
 
 ## 📝 Overview
 
-[cite_start]**SurfSense** is a master's thesis project developed as a **conversational agent** [cite_start]designed to streamline and enhance the process of planning a surf trip. [cite_start]It addresses the current challenge of having to check various, scattered sources for essential information—like weather forecasts, wave conditions, tide charts, and practical logistics—by unifying them into a single, intelligent, conversational interface.
+**SurfSense** is a master's thesis project developed as a **conversational agent** designed to streamline and enhance the process of planning a surf trip. It addresses the current challenge of having to check various, scattered sources for essential information—like weather forecasts, wave conditions, tide charts, and practical logistics—by unifying them into a single, intelligent, conversational interface.
 
-[cite_start]The core innovation is the integration of **Large Language Model (LLM)** capabilities with an **agentic framework** to provide surf planning advice, intelligent forecasting, and contextual awareness. [cite_start]This project was completed for the Master in Data Science and Advanced Analytics program at NOVA IMS Management School.
+The core innovation is the integration of **Large Language Model (LLM)** capabilities with an **agentic framework** to provide surf planning advice, intelligent forecasting, and contextual awareness. This project was completed for the Master in Data Science and Advanced Analytics program at NOVA IMS Management School.
 
 ---
 
 ## ✨ Key Features & Objectives
 
-[cite_start]SurfSense aims to provide a user-centered decision support system that overcomes the limitations of existing static forecasting tools.
+SurfSense aims to provide a user-centered decision support system that overcomes the limitations of existing static forecasting tools.
 
-* [cite_start]**Conversational Trip Planning:** Design a conversational agent that assists in **personalized surf trip planning**.
-* [cite_start]**Integrated Surf Forecasting:** Integrate surf condition forecasting (e.g., **wave height, swell interval, tide**) using time series models (like **Prophet** or **ARIMA**) or external APIs (like **MagicSeaWeed** or **Stormglass**).
-* [cite_start]**Contextual Enrichment:** Enrich planning capabilities with contextual data such as **beach accessibility, parking, and local surf spot characteristics**.
-* [cite_start]**Modular Architecture:** Develop a modular forecasting integration that can operate in **low-resource or offline environments**.
+* **Conversational Trip Planning:** Design a conversational agent that assists in **personalized surf trip planning**.
+* **Integrated Surf Forecasting:** Integrate surf condition forecasting (e.g., **wave height, swell interval, tide**) using time series models (like **Prophet** or **ARIMA**) or external APIs (like **MagicSeaWeed** or **Stormglass**).
+* **Contextual Enrichment:** Enrich planning capabilities with contextual data such as **beach accessibility, parking, and local surf spot characteristics**.
+* **Modular Architecture:** Develop a modular forecasting integration that can operate in **low-resource or offline environments**.
 
 ---
 
@@ -23,15 +23,15 @@
 
 ### System Architecture
 
-[cite_start]The system utilizes a hybrid architecture combining a **Large Language Model (LLM)** with **LangChain**.
+The system utilizes a hybrid architecture combining a **Large Language Model (LLM)** with **LangChain**.
 
-* [cite_start]**LLM + LangChain:** This setup orchestrates the agent's **reasoning**, manages the user **dialogue**, and executes external API calls, allowing the agent to carry out **multi-step planning** based on user inputs.
-* [cite_start]**Forecasting Component:** This component integrates existing surf and weather forecast APIs (e.g., MagicSeaWeed or Stormglass) directly into the agentic workflow for real-time predictions, or uses lightweight time series models (Prophet or ARIMA).
-* [cite_start]**Contextual Layer:** This layer is introduced for enriched recommendations and draws from auxiliary APIs or knowledge bases for **parking availability, beach reviews, and safety warnings**, adding **situational awareness** to the system.
+* **LLM + LangChain:** This setup orchestrates the agent's **reasoning**, manages the user **dialogue**, and executes external API calls, allowing the agent to carry out **multi-step planning** based on user inputs.
+* **Forecasting Component:** This component integrates existing surf and weather forecast APIs (e.g., MagicSeaWeed or Stormglass) directly into the agentic workflow for real-time predictions, or uses lightweight time series models (Prophet or ARIMA).
+* **Contextual Layer:** This layer is introduced for enriched recommendations and draws from auxiliary APIs or knowledge bases for **parking availability, beach reviews, and safety warnings**, adding **situational awareness** to the system.
 
 ### Expected Results
 
-[cite_start]The primary deliverable is a **working prototype** of a conversational agent that intelligently assists users in planning surf trips, merging LLM capabilities with agentic-generated forecasts and local knowledge.
+The primary deliverable is a **working prototype** of a conversational agent that intelligently assists users in planning surf trips, merging LLM capabilities with agentic-generated forecasts and local knowledge.
 
 ---
 
@@ -67,19 +67,19 @@
 
 ## 📚 Thesis Contributions
 
-[cite_start]This project contributes to the fields of LLM agents, forecasting, and human-computer interaction by:
+This project contributes to the fields of LLM agents, forecasting, and human-computer interaction by:
 
-* [cite_start]**Real-time Forecasting Application:** Providing a prototype application of LLM-based agentic frameworks to **real-time forecasting and contextual planning**.
-* [cite_start]**Modular Forecasting Integration:** Demonstrating a modular forecasting integration design that can operate effectively in both high- and **low-resource or offline environments**.
+* **Real-time Forecasting Application:** Providing a prototype application of LLM-based agentic frameworks to **real-time forecasting and contextual planning**.
+* **Modular Forecasting Integration:** Demonstrating a modular forecasting integration design that can operate effectively in both high- and **low-resource or offline environments**.
 
 ---
 
 ## 👤 Author & Supervisor
 
-* [cite_start]**Author:** Joshua Wehr 
+* **Author:** Joshua Wehr 
 * **Year:** 2025
-* [cite_start]**Program:** Master in Data Science and Advanced Analytics 
-* [cite_start]**Supervisor:** Prof. Bruno Jardim 
+* **Program:** Master in Data Science and Advanced Analytics 
+* **Supervisor:** Prof. Bruno Jardim 
 
 
 
